@@ -1,0 +1,26 @@
+//MongoDB
+db.restaurants.find().limit(20)
+db.restaurants.find({"borough": "Bronx"})
+db.restaurants.insert( {  }, {  })
+db.restaurants.distinct("borough")
+
+//Node.js + MongoDBClient
+
+MongoClient.connect(mongourl, function(err, db) { });
+
+db.collection('restaurants').find().limit(20);
+db.collection('restaurants').find({"borough": "Bronx"});
+db.collection('restaurants').insertOne({  }, function(err, result) { });
+db.collection("restaurants").distinct("   ", function(err, result) { });
+
+//Mongoose
+mongoose.connect(mongourl);
+		var db = mongoose.connection;
+		db.on('error', console.error.bind(console, 'connection error:'));
+		db.once('open', function(callback){ });
+
+Restaurant.find().limit(20, function(err, results) {} );
+Restaurant.find({"borough" : "Bronx"}, function(err, results) {} );
+var newRestaurant = new Restaurnat({  });  newRestaurant.save(function(err) {});
+Restaurant.find().distinct('  ', function(error, result){  });
+

@@ -1,0 +1,13 @@
+{
+	"name": "MongoDB",
+	"description": "COMPS381F - MongoDB driver",
+	"version": "0.0.1",
+	"dependencies": {
+		"mongodb": "latest",
+		"mongoose" : "*"
+	},
+	"scripts" : {
+		"start": "node server_odm.js"
+	},
+	"engine": "*"
+}
